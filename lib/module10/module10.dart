@@ -60,7 +60,7 @@ mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextSpan(
                     text: "Radhesh",
-                    style: TextStyle(fontSize: 20, color: Colors.red),
+                    style: TextStyle(fontSize: 25, color: Colors.red),
                   )
                 ]
               ))
