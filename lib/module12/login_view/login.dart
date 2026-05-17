@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 
+import '../Custom_file/custom_form_field.dart';
 import '../Custom_file/custom_text.dart';
 
 class loginView extends StatefulWidget {
-  const loginView({super.key});
+   const loginView({super.key});
+
+
 
   @override
   State<loginView> createState() => _loginViewState();
+
+
 }
 
 class _loginViewState extends State<loginView> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +27,7 @@ class _loginViewState extends State<loginView> {
          children: [
            CustomText(text: "Wellcome Back ", fontSize: 22, fontWeight: FontWeight.w700,),
            CustomText(text: "Please Enter you credential"),
-           CustomFormField()
+           CustomFormField( hintText: "",)
          ],
        ),
      ),
@@ -30,13 +36,3 @@ class _loginViewState extends State<loginView> {
   }
 }
 
-class CustomFormField extends StatelessWidget {
-  const CustomFormField({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return TextFormField();
-  }
-}
