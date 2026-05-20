@@ -30,26 +30,7 @@ mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(
-            child: Container(
-              margin: EdgeInsets.all(2),
-              height: 200,
-              width: 200,
-              transform: Matrix4.rotationZ(0.8),
-              decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [Colors.blue, Colors.red]),
-                color: Colors.red,
-
-                boxShadow:[
-                  BoxShadow(
-                    color: Colors.black,
-                    blurRadius: 5,
-                    spreadRadius: 0.9,
-                    offset: Offset(4, 5)
-                  )
-                ]
-
-              ),
-            ),
+            child: CustomList(),
           ),
           SizedBox(height: 20,),
 
@@ -73,3 +54,28 @@ mainAxisAlignment: MainAxisAlignment.center,
     );
   }
 }
+
+
+  Widget CustomList() {
+    return Container(
+      margin: EdgeInsets.all(2),
+      height: 200,
+      width: 200,
+      transform: Matrix4.rotationZ(0.8),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(colors: [Colors.blue, Colors.red]),
+        color: Colors.red,
+
+        boxShadow:[
+          BoxShadow(
+            color: Colors.black,
+            blurRadius: 5,
+            spreadRadius: 0.9,
+            offset: Offset(4, 5)
+          )
+        ]
+
+      ),
+    );
+  }
+

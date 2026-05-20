@@ -4,21 +4,22 @@ import 'package:flutter/material.dart';
 class CustomFormField extends StatelessWidget{
 
   final String hintText;
-  final bool obsecure;
+  final bool? obsecure;
   final TextEditingController? controller;
   final Icon? suffixIcon;
   final Icon? prefixIcon;
   final TextInputType? keyBoardType;
+  final String? Function(String?)? validatior;
 
   CustomFormField({
-    super.key, required this.hintText, this.obsecure, this.controller, this. suffixIcon, this.prefixIcon, this.keyBoardType
+    super.key, required this.hintText,this.validatior, this.obsecure, this.controller, this. suffixIcon, this.prefixIcon, this.keyBoardType
   });
-  TextEditingController phoneC= TextEditingController();
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+validator: validatior,
       controller:controller,
-      obscureText: obsecure,
+      obscureText: obsecure?? false,
       keyboardType: keyBoardType,
       decoration: InputDecoration(
           prefixIcon: prefixIcon,
